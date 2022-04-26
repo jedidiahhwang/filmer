@@ -1,3 +1,9 @@
+# filmer
+
+This project was designed as a Letterboxd clone with personal touches
+
+Note: This project follows get-crafty very closely itentionally to practice MERN in different projects
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
