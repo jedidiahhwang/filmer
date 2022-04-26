@@ -12,10 +12,5 @@ const userSchema = new mongoose.Schema({
     lastName: String,
     password: String,
     email: String,
-    movies: [
-        movie = {
-            name: String,
-
-        }
-    ]
+    movies: []
 })
