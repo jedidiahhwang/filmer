@@ -14,3 +14,7 @@ const userSchema = new mongoose.Schema({
     email: String,
     movies: []
 })
+
+let User = mongoose.model("User", userSchema);
+
+module.exports = User;
