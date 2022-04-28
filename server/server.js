@@ -4,7 +4,7 @@ const cors = require("cors");
 
 require("./mongoose/setup.js");
 
-const {register, login} = require("./controllers/authController.js");
+const {register, login, logout, getUserSession} = require("./controllers/authController.js");
 
 const app = express();
 
@@ -24,5 +24,7 @@ app.use(express.json());
 
 app.post("/auth/register", register);
 app.post("/auth/login", login);
+app.post("/auth/logout", logout);
+app.get("/auth/userSession", getUserSession);
 
 app.listen(5005, () => console.log("Server is running on 5005"));
