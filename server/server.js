@@ -6,7 +6,7 @@ require("./mongoose/setup.js");
 
 const {register, login, logout, getUserSession} = require("./controllers/authController.js");
 const {addMovie} = require("./controllers/moviesController.js");
-const {searchMovie} = require("./controllers/tmdbController.js");
+const {getPopularMovies, searchMovie, searchPerson} = require("./controllers/tmdbController.js");
 
 const app = express();
 
@@ -31,6 +31,8 @@ app.get("/auth/userSession", getUserSession);
 
 app.post("/movie/add", addMovie);
 
-app.get("/tmdb/search", searchMovie);
+app.get("/tmdb/getPopularMovies", getPopularMovies);
+app.get("/tmdb/searchMovie", searchMovie);
+app.get("/tmdb/searchPerson", searchPerson);
 
 app.listen(5005, () => console.log("Server is running on 5005"));
